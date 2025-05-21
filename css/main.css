@@ -1,0 +1,165 @@
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Montserrat", sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+  overscroll-behavior: smooth;
+}
+
+:root {
+  --royal-blue : #624DE3;
+  --ottoman : #EBF9F1;
+  --solitaire: #FEF2E5;
+  --carrousel-pink : #FBE7E8;
+  --black : #000000;
+  --selago : #F7F6FE;
+}
+
+.hidden {
+  display: none !important;
+}
+
+img {
+  display: inline-block;
+}
+
+body {
+  background-color: #FFFFFF;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px;
+}
+
+label {
+  cursor: text;
+  position: relative;
+}
+
+.search-logo {
+  position: absolute;
+  top: 50%;
+  left: 0px;
+  translate: 50% -50%;
+  z-index: 1;
+}
+
+#search {
+  width: 386px;
+  padding: 8px 8px 8px 32px;
+  border: 1px solid #9E9E9E;
+  outline: none;
+  border-radius: 8px;
+}
+
+.add-button {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background-color: var(--royal-blue);
+  padding: 8px 12px;
+  color: #FFFFFF;
+  border-radius: 8px;
+  outline: none;
+  border: none;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+thead th {
+  padding: 16px;
+}
+
+tbody tr {
+  &:nth-child(odd) {
+    background-color: var(--selago);
+  }
+}
+
+tbody th {
+  padding: 16px;
+}
+
+tbody td {
+  padding: 16px 16px 16px 0;
+}
+
+th, td {
+  text-align: center;
+  vertical-align: middle;
+}
+
+.container-product {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.image-product {
+  width: 32px;
+  height: 32px;
+}
+
+.table-statut {
+  padding: 8px 12px;
+  border-radius: 22px;
+}
+
+[data-statut="Delivered"] {
+  background-color: var(--ottoman);
+}
+
+[data-statut="Process"] {
+  background-color: var(--solitaire);
+}
+
+[data-statut="Canceled"] {
+  background-color: var(--carrousel-pink);
+}
+
+.action-table-button {
+  cursor: pointer;
+}
+
+footer {
+  padding: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+}
+
+.action-page-button {
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+  outline: none;
+}
+
+.number-page-button {
+  width: 36px;
+  height: 36px;
+  border-radius: 8px;
+  background-color: #E0E0E0;
+  color: #000000;
+  padding: 8px;
+  outline: none;
+  border: none;
+}
+
+.selected-number-button {
+  background-color: var(--royal-blue);
+  color: #FFFFFF;
+}
